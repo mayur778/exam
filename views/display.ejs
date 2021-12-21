@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/insertpage">Add data</a>
+    <table border="5">
+        <tr>
+            <td>name</td>
+            <td>Email</td>
+            <td>Image</td>
+            <td>update</td>
+            <td>delete</td>
+        </tr>
+
+        
+        <% data.forEach(function(item){ %>
+            <tr>
+                <td><%= item.name%></td>
+                <td><%= item.email%></td>
+                <td><img src="http://localhost:5000/getImage/<%= item.pic%>" style="height: 100px; width: 100px;"></td>
+                <td><a href="/display/<%= item._id%>">update</a></td>
+                <td><a href="/delete/<%= item._id%>">delete</a></td>
+            </tr>
+
+      <%  })%>
+    </table>
+    <a href="/logout">logout</a>
+</body>
+</html>

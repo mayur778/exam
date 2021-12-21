@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <form method="post" enctype="multipart/form-data" action="/update/<%= data._id%>">
+            Name : <input type="text" name="name" value="<%= data.name%>"/>
+            Address : <input type="text" name="address" value="<%= data.address%>" />
+            Image : <input type="file" name="image" value="<%= data.image%>" />
+            <input type="submit" /> 
+        </form>
+    </body>
+</html>
